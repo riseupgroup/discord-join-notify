@@ -1,0 +1,21 @@
+[package]
+name = "discord-join-notify"
+version = "0.1.0"
+edition = "2021"
+
+authors = ["Julian Horn <mail@julian-horn.net>", "Bela Drescher <mail@untbu.de>"]
+description = "Get a notification via Telegram when your Friends join a Discord channel"
+license = "MIT"
+repository = "https://github.com/riseupgroup/discord-join-notify"
+keywords = ["discord", "telegram", "notification"]
+
+[dependencies]
+env_logger = "0.11.6"
+log = "0.4.25"
+ron = "0.8.1"
+serde = { version = "1.0.217", features = ["derive"] }
+serenity = "0.12.4"
+teloxide = { version = "0.13.0", default-features = false, features = ["macros", "rustls"] }
+tokio = { version = "1.43.0", features = ["rt-multi-thread", "signal"] }
+tracing = "0.1.41"
+tracing-subscriber = "0.3.19"

@@ -1,0 +1,6 @@
+services:
+  app:
+    image: riseupgroup/discord-join-notify:latest
+    volumes:
+      - ./:/config
+    restart: unless-stopped

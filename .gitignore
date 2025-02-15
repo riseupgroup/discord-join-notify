@@ -1,0 +1,8 @@
+/target
+/Cargo.lock
+/config.ron
+
+# OS
+__MACOSX
+.DS_Store
+Thumbs.db

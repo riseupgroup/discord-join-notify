@@ -1,0 +1,16 @@
+name: Build Docker Image (dev)
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    uses: ./.github/workflows/docker-build.yaml
+    with:
+      tag: "dev"
+      repository: "${{ vars.DOCKERHUB_ORG }}/${{ github.event.repository.name }}"
+    secrets:
+      username: ${{ secrets.DOCKERHUB_USERNAME }}
+      token: ${{ secrets.DOCKERHUB_TOKEN }}
